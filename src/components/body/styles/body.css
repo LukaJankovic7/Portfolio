@@ -1,0 +1,37 @@
+.body {
+    width: 100%;
+    min-height: 100vh;
+    background-color:rgb(238, 238, 238);
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(204, 204, 204), white 15% 85%, rgb(204, 204, 204));
+
+}
+
+.wrapper {
+    max-width: 65vw;
+    min-height: 50vh;
+    margin: auto;
+    background-color: white;
+    padding: 0 2% 5%;
+}
+
+.wrapper h1 {
+    border-bottom: .2rem solid gray;
+    margin-bottom: 1.5rem;
+}
+
+
+.wrapper p {
+    margin-bottom: .8rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper{ 
+        max-width: 80vw;
+    }
+
+    .body {
+        background-image: linear-gradient(to right, rgb(204, 204, 204), white 8% 92%, rgb(204, 204, 204));
+    }
+}
+

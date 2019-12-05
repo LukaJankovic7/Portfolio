@@ -1,0 +1,284 @@
+/* ----------------------------Project styles -----------------------*/
+
+.projectInstance {
+    position: relative;
+    margin-top: 5rem;
+    box-shadow: 0 .5rem 5px gray;
+    max-height: 400px;
+    overflow: hidden;
+    transition: max-height .2s ease-in-out;
+}
+
+.projectInstance h2{
+    width: 60%;
+    margin: 0 auto 2rem;
+}
+
+.projectImageContainer {
+    width: 40%;
+    height: 6em;
+    max-height: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.projectImageContainer * {
+    transition: flex 0.2s ease-in-out;
+    /* background-color: black; */
+    /* flex-grow: 0; */
+}
+
+.centerImageGrow {
+    flex-grow: 1;
+    /* background-color: red; */
+}
+
+.projectImage {
+    width: 100%;
+    flex-shrink: 4;
+}
+
+.projectTextContainer{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.projectContent p { 
+    line-height: 1.25em;
+    max-height: 5em;
+    overflow: hidden;  
+    margin: 0;
+    position: relative;
+}
+
+.projectContent p::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.068), #fff 100%);
+    z-index: 1;
+}
+
+.links a {
+    width: fit-content;
+    display: inline-block; 
+}
+
+.links a:first-child {
+    margin-right: 1rem;
+}
+
+.projectInstance:nth-child(odd) .links {
+    text-align: right;
+}
+
+.linkIcon {
+    height: 2.2rem;
+}
+/* ------------------Zig-Zag Projects-------------------------- */
+
+.projectInstance:nth-child(even) .projectContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.projectInstance:nth-child(odd) .projectContent{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.projectInstance:nth-child(even) .projectImageContainer {
+    flex-direction: row-reverse !important;
+}
+/* -------------------------Expand button------------------------- */
+
+
+
+.expand {
+    margin-top: 1.5rem;
+    height: 4rem;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+
+
+.expand img {
+    height: 60%;
+    width: 10%;
+    margin-top: 10px;
+    animation-name: RotateButtonBack;
+    animation-duration: .3s;
+}
+
+/*---------------------------Expanded Project------------------------------ */
+
+.projectExpanded.projectInstance {
+    max-height: 10000px !important;
+    /* transition: max-height .2s ease-in-out; */
+}
+
+.projectExpanded .projectImageContainer{
+    width: 100%;
+    height: 19vw;
+    margin-bottom: .5rem;
+}
+
+.projectExpanded .projectImage {
+    width: 70%;
+}
+
+.projectExpanded .centerImageGrow {
+    flex-grow: 0; 
+}
+
+.projectInstance.projectExpanded .projectContent {
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.projectExpanded .projectTextContainer{
+    width: 100%;
+    text-align: center;
+}
+
+.projectExpanded .projectTextContainer p {
+    max-height: none !important;
+}
+
+.projectExpanded .projectContent p::after {
+    height: 0;
+}
+
+.projectExpanded .expand img {
+    transform: rotateX(180deg);
+    animation-name: RotateButton;
+    animation-duration: .5s;
+}
+
+.projectExpanded .links{
+    margin-top: 1rem;
+    text-align: inherit !important;    
+}
+
+/*---------------------------Animations ---------------------------------- */
+
+/* FIX */
+
+@keyframes RotateButton {
+    from {transform: rotateX(0deg)};
+    to {transfrom: rotateX(180deg)};
+}
+
+@keyframes RotateButtonBack {
+    from {transform: rotateX(180deg)}
+    to {transform: rotateX(0deg)}
+}
+
+/* -----------------------------------Responsive-------------------------------------- */
+
+/* Liminting expanded project image on larger screens */
+@media only screen and (min-width: 1280px) {
+    .projectImageContainer {
+        height: 25rem;
+    }
+
+    .projectContent p {
+        max-height: 7.5em;
+    }
+
+    .projectExpanded .projectImage {
+        width: 40rem;
+    }
+
+    /* FIX */
+}
+
+@media only screen and (min-width: 769px) {
+    
+/* enable hover effect for wider devices  */
+    .expand::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        box-shadow: 0px -1px 1px -1px #4abdac;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+
+    .expand:hover {
+        background-color: #4abdac;
+    }
+
+    .expand:hover::after {
+        opacity: 1
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .projectContent {
+        padding: 0 5% !important;
+        justify-content: space-between !important;
+    }
+
+    .projectTextContainer {
+        width: 55%;
+    }
+
+    .projectExpanded .projectImage {
+        /* max-width: none; */
+        width: 50%;
+        /* margin-left: 25% !important; */
+    }
+
+    /* FIX */
+}
+
+@media only screen and (max-width: 600px) {
+    .projectContent {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .projectTextContainer {
+        width: 90%;
+        text-align: center;
+    }
+
+    .projectImageContainer {
+        width: 50% !important;
+        height: 6em !important;
+        margin-bottom: 5px !important;
+        animation-name: none !important;
+    }
+
+    .projectImageContainer * {
+        transition: none !important;
+    }
+
+    .projectImage {
+        width: 100% !important;
+    }
+
+    .links{
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .projectImageContainer {
+        width: 80% !important;
+    }
+}

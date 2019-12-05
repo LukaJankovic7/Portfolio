@@ -1,0 +1,11 @@
+#about {
+    padding: 3rem 0 0;
+}
+
+#about * {
+    margin: 0;
+}
+
+#about p {
+    padding: 1rem 2rem;
+}

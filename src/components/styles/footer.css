@@ -1,0 +1,75 @@
+#footer {
+    padding-top: 1rem;
+    background-image: linear-gradient(to right, rgb(204, 204, 204), white 15% 85%, rgb(204, 204, 204));
+}
+
+#footer h1 {
+    margin: 0;
+}
+
+.SocialMedia{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+
+.SocialMedia div {
+    width: 9rem;
+    height: 8rem;
+    margin: 2rem 1vw;
+    padding-top: 1rem;
+    border-radius: 20%;
+}
+
+.SocialMedia div:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 3px gray;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.SocialMediaIcon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+    #footer {
+        background-image: linear-gradient(to right, rgb(204, 204, 204), white 8% 92%, rgb(204, 204, 204));
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .SocialMedia {
+        width: fit-content;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: fit-content;
+        margin: 2rem auto;
+    }
+
+    .SocialMedia div {
+        width: fit-content;
+        height: fit-content;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .SocialMedia div:hover {
+        box-shadow: none;
+    }
+
+    .SocialMedia * {
+        display: inline-block;
+        font-size: 105%;
+    }
+
+    .SocialMediaIcon {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 10px;
+    } 
+}

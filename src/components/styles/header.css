@@ -1,0 +1,45 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 70vw;
+    top: 0;
+    left: 15vw;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.856) 25%, transparent 70%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.NavBar {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.NavBar li {
+    font-weight: 800;
+    margin: 0 .9rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.NavBar li:hover {
+    color: rgb(107, 107, 107);
+    box-shadow: 0 1px 2px -2px gray;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 80vw;
+        left: 10vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        width: 100vw !important ;
+        left: 0;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.856) !important;
+    }
+}

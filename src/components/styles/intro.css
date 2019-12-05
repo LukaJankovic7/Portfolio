@@ -1,0 +1,46 @@
+.intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.164), rgba(19, 19, 19, 0.849) 80%), url('../../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    font-size: 6rem;
+}
+
+.textFadeIn {
+    opacity: 100;
+    animation-name: FadeIn;
+    animation-duration: .7s;
+}
+
+.textFadeOut {
+    opacity: 0;
+    animation-name: FadeOut;
+    animation-duration: .7s;
+}
+
+@keyframes FadeIn {
+    from {opacity: 0}
+    to {opacity:100}
+}
+
+@keyframes FadeOut {
+    from {opacity: 100}
+    to {opacity: 0}
+}
