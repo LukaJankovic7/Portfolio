@@ -9,7 +9,12 @@ const INTRO_TEXT = [
 ]
 
 class Intro extends Component {
-    state = {textIndex: 0, fadeIn: true};
+    // state = {textIndex: 0, fadeIn: true};
+
+    constructor() {
+        super();
+        this.state = {textIndex: 0, fadeIn: true};
+    }
 
     componentDidMount() {
         this.timeout = setTimeout(()=>{

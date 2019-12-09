@@ -12,7 +12,12 @@ PROJECTS.forEach( project => {
 }) 
 
 class Projects extends Component {
-    state = {projectsExpanded};
+    // state = {projectsExpanded};
+
+    constructor() {
+        super();
+        this.state = {projectsExpanded};
+    }
 
 
         //This was used for manipulating length of projects description (longer if expanded, shorter if collapsed)
@@ -24,7 +29,7 @@ class Projects extends Component {
     //     this.setState({projectsExpanded});
     // }
 
-    expandProject = (projectTitle) => {
+    expandProject (projectTitle)  {
         const project = document.getElementById(projectTitle);
         if(!project.classList.contains(`${ProjectStyles.projectExpanded}`)) {
             project.classList.add(`${ProjectStyles.projectExpanded}`);
