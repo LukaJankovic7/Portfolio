@@ -15,7 +15,7 @@ class Intro extends Component {
         super();
         this.state = {textIndex: 0, fadeIn: true};
     }
-
+    
     componentDidMount() {
         this.timeout = setTimeout(()=>{
                 this.setState({fadeIn:false});

@@ -29,7 +29,7 @@ class Projects extends Component {
     //     this.setState({projectsExpanded});
     // }
 
-    expandProject (projectTitle)  {
+    expandProject(projectTitle) {
         const project = document.getElementById(projectTitle);
         if(!project.classList.contains(`${ProjectStyles.projectExpanded}`)) {
             project.classList.add(`${ProjectStyles.projectExpanded}`);
