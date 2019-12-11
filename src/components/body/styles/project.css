@@ -38,6 +38,7 @@
 .projectImage {
     width: 100%;
     flex-shrink: 4;
+    border: 1px solid rgba(128, 128, 128, 0.438);
 }
 
 .projectTextContainer{

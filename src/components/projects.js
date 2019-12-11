@@ -1,6 +1,6 @@
-import MMatricaIMG from '../assets/background.jpg'
-import DataBankIMG from '../assets/background.jpg'
-import CardGamesIMG from '../assets/background.jpg'
+import MMatricaIMG from '../assets/projectImages/MMatrica.png'
+import DataBankIMG from '../assets/projectImages/DataBank.png'
+import CardGamesIMG from '../assets/projectImages/CardGames.png'
 
 const PROJECTS = [
     {
@@ -20,7 +20,7 @@ const PROJECTS = [
         "github": "https://github.com/LukaJankovic7/DataBank",
         "description": `This project uses Gatsby and its plugins to manage contentful data and display it on the web application.
         It features a log in system which allows you to display different data for different users. This was a test project which
-        helped me practise Gatsby so there is no sign up system od way to add new data through the site, those need to be 
+        helped me practice Gatsby so there is no sign up system or way to add new data through the site, those need to be 
         added manually through Contentful`, 
         "image" : DataBankIMG
     },
@@ -29,7 +29,7 @@ const PROJECTS = [
         "title": "CardGames",
         "link": "link",
         "github": "https://github.com/LukaJankovic7/CardGames",
-        "description": `A web aplication that has 2 luck based card games made for two players. A React application using Deck of cards
+        "description": `A web application that has 2 luck based card games made for two players. A React application using Deck of cards
         API to shuffle decks and draw cards. It has a score system keeping track of the current score as well as the best score.`,
         "image" : CardGamesIMG
     }
