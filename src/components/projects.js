@@ -1,6 +1,6 @@
-import MMatricaIMG from '../assets/MMatrica.png'
-import DataBankIMG from '../assets/DataBank.png'
-import CardGamesIMG from '../assets/CardGames.png'
+import MMatricaIMG from '../assets/projectImages/MMatrica.jpg'
+import DataBankIMG from '../assets/projectImages/DataBank.jpg'
+import CardGamesIMG from '../assets/projectImages/CardGames.jpg'
 
 const PROJECTS = [
     {
