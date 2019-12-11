@@ -28,7 +28,7 @@ const SOCIAL_MEDIA = [
     },
     {
         "name":"eMail",
-        "link":"gmail.com",
+        "link":"mailto:itsluka.jankovic@gmail.com",
         "icon":GMail
     },
 ]
