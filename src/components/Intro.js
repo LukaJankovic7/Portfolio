@@ -4,7 +4,7 @@ import profileImg from '../assets/profile.jpg'
 
 const INTRO_TEXT = [
     'A web developer in possession of HTML, CSS and JS skills',
-    'Experience in React, Gatsby',
+    'Experience in React, Redux, Gatsby',
     'Passionate about learning more every day'
 ]
 
