@@ -38,7 +38,7 @@ class Intro extends Component {
     }
 
     render()
-        {  
+        { 
         return (
             <div className={IntroStyles.intro}>
                 <img src={profileImg} alt="img"></img>

@@ -16,48 +16,27 @@ class Projects extends Component {
 
     constructor() {
         super();
-        this.state = {projectsExpanded};
+        this.state = {projectsExpanded}; 
     }
-
-
-        //This was used for manipulating length of projects description (longer if expanded, shorter if collapsed)
-    // modifyState = (state, projectTitle) => {
-    //     projectsExpanded = this.state.projectsExpanded;
-    //     projectsExpanded.forEach( project => {
-    //         if (project.title === projectTitle) project.isExpanded = state;
-    //     })
-    //     this.setState({projectsExpanded});
-    // }
 
     expandProject(projectTitle) {
         const project = document.getElementById(projectTitle);
         if(!project.classList.contains(`${ProjectStyles.projectExpanded}`)) {
             project.classList.add(`${ProjectStyles.projectExpanded}`);
-            // this.modifyState(true, projectTitle)
             
         }
         else {
-            project.classList.remove(`${ProjectStyles.projectExpanded}`);
-            
-            // this.modifyState(false, projectTitle);
+            project.classList.remove(`${ProjectStyles.projectExpanded}`);       
         }
     }
 
     render(){
         return (
             <div id = "projects">
-                <div id="test"></div>
                 <h1>My projects</h1>
                 {
                     PROJECTS.map(PROJECT => {
                         let {description, image, title, link, github} = PROJECT;
-                        // let projects = this.state.projectsExpanded;
-                        // projects.forEach( project => {
-                        //     if (project.title===title) {
-                        //         if(!project.isExpanded) description = `${PROJECT.descriptionShort}...`;
-                        //         else description = PROJECT.descriptionLong;
-                        //     }
-                        // })
 
                         return (
                             <div className={ProjectStyles.projectInstance} key={title} id={title}>
