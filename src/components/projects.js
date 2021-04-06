@@ -27,7 +27,7 @@ const PROJECTS = [
     {
         "id": 3,
         "title": "CardGames",
-        "link": "link",
+        "link": "https://gallant-ride-bc9fc6.netlify.app/",
         "github": "https://github.com/LukaJankovic7/CardGames",
         "description": `A web application that has 2 luck based card games made for two players. A React application using Deck of cards
         API to shuffle decks and draw cards. It has a score system keeping track of the current score as well as the best score.`,
