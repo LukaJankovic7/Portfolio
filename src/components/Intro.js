@@ -3,8 +3,7 @@ import IntroStyles from './styles/intro.css'
 import profileImg from '../assets/profile.jpg'
 
 const INTRO_TEXT = [
-    'A web developer in possession of HTML, CSS and JS skills',
-    'Experience in React, Redux, Gatsby',
+    'Experience in HTML, CSS, JS',
     'Passionate about learning more every day'
 ]
 
@@ -42,7 +41,7 @@ class Intro extends Component {
         return (
             <div className={IntroStyles.intro}>
                 <img src={profileImg} alt="img"></img>
-                <h1>Luka Janković</h1>
+                <h1>Luka Jankovic</h1>
                 <p className={this.state.fadeIn ? (IntroStyles.textFadeIn) : (IntroStyles.textFadeOut)}>
                     {
                         INTRO_TEXT[this.state.textIndex]

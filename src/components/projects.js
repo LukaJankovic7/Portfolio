@@ -1,6 +1,7 @@
 import MMatricaIMG from '../assets/projectImages/MMatrica.jpg'
 import DataBankIMG from '../assets/projectImages/DataBank.jpg'
 import CardGamesIMG from '../assets/projectImages/CardGames.jpg'
+import DataDisplayIMG from '../assets/projectImages/DataDisplay.jpg'
 
 const PROJECTS = [
     {
@@ -32,6 +33,16 @@ const PROJECTS = [
         "description": `A web application that has 2 luck based card games made for two players. A React application using Deck of cards
         API to shuffle decks and draw cards. It has a score system keeping track of the current score as well as the best score.`,
         "image" : CardGamesIMG
+    },
+    {
+        "id": 4,
+        "title": "DataDisplay",
+        "link": "https://ecstatic-cray-32db7f.netlify.app/",
+        "github": "https://github.com/LukaJankovic7/college-dataDisplay",
+        "description": `A simple web application used for displaying data from virtual sensors. Data is being randomly generated and displayed in charts. 
+        Users can see characteristic values like the minimum and maximum values in the whole dataset, as well as in the currently visible dataset. Users also 
+        have control over some chart properties.`,
+        "image" : DataDisplayIMG
     }
 ]
 
